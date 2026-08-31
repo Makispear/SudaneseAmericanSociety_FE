@@ -1,0 +1,104 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(26, 127, 61, 0.18);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, opacity 0.28s ease;
+}
+
+.navbar--top {
+  background: rgba(255, 255, 255, 0);
+  border-bottom: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.navbar--top .logoText {
+  color: #ffffff;
+}
+
+.navbar--top .logoIcon {
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(26, 127, 61, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar--scrolled .logoText {
+  color: #000000;
+}
+
+.navbar--scrolled .logoIcon {
+  border-color: rgba(26, 127, 61, 0.2);
+  box-shadow: 0 8px 22px rgba(26, 127, 61, 0.2);
+}
+
+.navbar--hidden {
+  transform: translateY(-110%);
+}
+
+.navbar--visible {
+  transform: translateY(0);
+}
+
+.logoLink {
+  display: flex;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(26, 127, 61, 0.2);
+  box-shadow: 0 8px 22px rgba(26, 127, 61, 0.2);
+  display: block;
+}
+
+.logoText {
+  color: #000000;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: color 0.28s ease;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .logoText {
+    font-size: 0.9rem;
+  }
+}

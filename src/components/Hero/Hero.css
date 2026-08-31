@@ -1,0 +1,127 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 560px;
+  padding: 56px 24px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(185, 28, 28, 0.38)),
+    url("../../assets/LandingPage/groupPicture.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.08));
+  z-index: 0;
+}
+
+.hero-section__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+.hero-section__eyebrow {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 0.76rem;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-section h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.hero-section p {
+  margin: 18px 0 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.hero-section__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-section button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 24px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero-section button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-section .join {
+  background: #1a7f3d;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(26, 127, 61, 0.32);
+}
+
+.hero-section .join:hover {
+  background: #126a34;
+}
+
+.hero-section .learn {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.hero-section .learn:hover {
+  background: #f3f3f3;
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    min-height: 440px;
+    padding: 36px 18px;
+  }
+
+  .hero-section__content {
+    max-width: 100%;
+  }
+
+  .hero-section__actions {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .hero-section button {
+    width: 100%;
+  }
+}
