@@ -405,6 +405,11 @@ function SignupPage() {
                 </div>
                 <h2>Account created</h2>
                 <p>{successMessage}</p>
+                <p className="signup-success__note">
+                  Creating an account does not automatically grant access to the
+                  WhatsApp group. Access is available to paying members once their
+                  membership is active.
+                </p>
                 <button
                   type="button"
                   className="signup-success__button"
@@ -577,6 +582,10 @@ function SignupPage() {
                         <option value="Individual">Individual</option>
                         <option value="Family">Family</option>
                       </select>
+                      <p className="membership-help">
+                        Individual members age 18 and under do not pay. Family
+                        memberships still require payment.
+                      </p>
                       {errors.membershipType ? (
                         <small className="field-error">
                           {errors.membershipType}

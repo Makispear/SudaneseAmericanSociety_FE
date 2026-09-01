@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar.jsx";
+import Footer from "../../components/Footer/footer.jsx";
 import "./AboutPage.css";
 
 const valueCards = [
@@ -384,6 +385,7 @@ export default function AboutPage() {
         <LookingAhead />
         <AboutCTA />
       </main>
+      <Footer />
     </>
   );
 }

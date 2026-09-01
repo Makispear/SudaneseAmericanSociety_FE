@@ -216,6 +216,18 @@
   border-color: rgba(185, 28, 28, 0.45);
 }
 
+.membership-help {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  background: rgba(20, 111, 57, 0.06);
+  border: 1px solid rgba(20, 111, 57, 0.12);
+  color: var(--signup-green-900);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
 .password-field {
   position: relative;
 }
@@ -417,6 +429,18 @@
   color: var(--signup-muted);
   font-size: 1.04rem;
   line-height: 1.8;
+}
+
+.signup-success__note {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(185, 28, 28, 0.08);
+  border: 1px solid rgba(185, 28, 28, 0.14);
+  color: var(--signup-green-900);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  font-weight: 700;
 }
 
 .signup-success__button {

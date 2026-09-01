@@ -13,10 +13,22 @@
 }
 
 .what-we-do__title {
+  position: relative;
+  display: inline-block;
   margin: 0 0 12px;
   color: #000000;
   font-size: clamp(2.1rem, 4vw, 3rem);
   font-weight: 800;
+}
+
+.what-we-do__title::after {
+  content: "";
+  display: block;
+  width: 86px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: rgba(185, 28, 28, 0.4);
 }
 
 .what-we-do__intro {
@@ -37,6 +49,7 @@
 .what-we-do__card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 3px solid rgba(185, 28, 28, 0.22);
   border-radius: 18px;
   padding: 28px 22px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
@@ -77,6 +90,33 @@
   margin: 0;
   color: #3a3a3a;
   font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.what-we-do__membership-note {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border: 1px solid rgba(26, 127, 61, 0.18);
+  border-left: 4px solid #c9a448;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(26, 127, 61, 0.06), rgba(201, 164, 72, 0.08));
+  box-shadow: 0 10px 24px rgba(26, 127, 61, 0.08);
+}
+
+.what-we-do__membership-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #0d5c2b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+}
+
+.what-we-do__membership-note p {
+  margin: 0;
+  color: #2e2e2e;
+  font-size: 1rem;
   line-height: 1.7;
 }
 

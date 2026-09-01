@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage.jsx";
 import AboutPage from "../pages/About/AboutPage.jsx";
+import LearnMoreSchool from "../pages/School/learnMoreSchool.jsx";
 import SignupPage from "../pages/Auth/SignUp/SignupPage.jsx";
 import EmailVerificationPage from "../pages/Email/Verification/EmailVerificationPage.jsx";
 // import FamilyMembershipPage from "../pages/FamilyMembershipPage";
@@ -19,6 +20,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/school" element={<LearnMoreSchool />} />
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/verify-email" element={<EmailVerificationPage />} />
       {/* <Route path="/family-membership" element={<FamilyMembershipPage />} /> */}

@@ -625,6 +625,7 @@
 
 .about-cta {
   padding: 88px 24px 110px;
+  margin-bottom: 0;
   background: linear-gradient(
     135deg,
     var(--about-green-900),

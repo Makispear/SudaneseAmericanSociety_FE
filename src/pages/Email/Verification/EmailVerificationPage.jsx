@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../../components/Navbar/Navbar.jsx";
+import Footer from "../../../components/Footer/footer.jsx";
 import "./EmailVerificationPage.css";
 
 function EmailVerificationPage() {
@@ -23,6 +24,7 @@ function EmailVerificationPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

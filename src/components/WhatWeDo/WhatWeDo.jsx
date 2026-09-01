@@ -4,28 +4,28 @@ const WhatWeDo = () => {
   const cards = [
     {
       icon: "📚",
-      title: "Our Children & Heritage",
+      title: "Our Children's Education & Heritage",
       description:
-        "Keeping our language, faith, culture, and connection to Sudan alive for our children and generations to come."
+        "Keeping Arabic, Quran, Sudanese culture, and our connection to Sudan alive for the next generation.",
     },
     {
       icon: "🤝",
       title: "Community Support",
       description:
-        "Supporting one another through life's difficult moments and making sure no one has to face them alone."
+        "Standing beside one another through difficult times, including funerals, loss, and other moments when our community needs us.",
     },
     {
       icon: "🎉",
       title: "Life & Celebrations",
       description:
-        "Sharing life's most important moments together, from marriages and family gatherings to celebrations at Aldar."
+        "Coming together for marriages, Henna, Walima, Eid, graduations, and the moments that bring us together.",
     },
     {
       icon: "🌟",
       title: "Activities & Connection",
       description:
-        "Creating opportunities to have fun, build friendships, share experiences, and simply enjoy being together."
-    }
+        "Creating opportunities to make friends, have fun, and spend time together through weekly activities, trips, gatherings, and more.",
+    },
   ];
 
   return (
@@ -35,9 +35,9 @@ const WhatWeDo = () => {
           We stand together.
         </h2>
         <p className="what-we-do__intro">
-          From supporting one another here in America to giving back to Sudan and
-          nurturing the next generation, we come together as a community to build
-          something stronger—together.
+          From educating our children and preserving our heritage to supporting
+          one another through life's most important moments, we are here for
+          each other.
         </p>
 
         <div className="what-we-do__grid">
@@ -50,6 +50,16 @@ const WhatWeDo = () => {
               <p>{card.description}</p>
             </article>
           ))}
+        </div>
+
+        <div className="what-we-do__membership-note" aria-label="Membership access notice">
+          <span className="what-we-do__membership-label">Member access</span>
+          <p>
+            Paying members receive access to our WhatsApp community group for updates,
+            reminders, and family announcements. Creating an account alone does not
+            grant access. For individual memberships, anyone age 18 or under does not
+            pay; family memberships still require payment.
+          </p>
         </div>
       </div>
     </section>
