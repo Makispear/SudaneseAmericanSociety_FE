@@ -160,7 +160,11 @@
   border: 1px solid rgba(185, 28, 28, 0.18);
   border-left: 4px solid rgba(185, 28, 28, 0.8);
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(185, 28, 28, 0.06), rgba(20, 111, 57, 0.04));
+  background: linear-gradient(
+    135deg,
+    rgba(185, 28, 28, 0.267),
+    rgba(20, 111, 57, 0.04)
+  );
 }
 
 .membership__note strong {
@@ -177,6 +181,23 @@
   color: #2d2d2d;
   font-size: 1.02rem;
   line-height: 1.75;
+}
+
+.membership__type {
+  font-weight: 800;
+}
+
+.membership__type--individual {
+  color: #d4a574;
+}
+
+.membership__type--family {
+  color: #5eb3de;
+}
+
+.membership__mujamala {
+  color: #c9a448;
+  font-weight: 800;
 }
 
 .final-cta {
@@ -241,7 +262,9 @@
   font-size: 0.96rem;
   font-weight: 800;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .final-cta__primary {

@@ -4,7 +4,11 @@ import "./Membership.css";
 const Membership = () => {
   return (
     <>
-      <section className="membership" aria-labelledby="membership-title" id="membership">
+      <section
+        className="membership"
+        aria-labelledby="membership-title"
+        id="membership"
+      >
         <div className="membership__container">
           <p className="membership__eyebrow">Membership</p>
 
@@ -13,62 +17,60 @@ const Membership = () => {
               There’s a place for you here.
             </h2>
             <p className="membership__quote">
-              Whether you're looking to connect with other Sudanese Americans,
-              participate in community activities, learn about your heritage, or
-              support our efforts, we welcome you to be part of the Society.
+              Whether you're looking to connect with other Sudanese, participate
+              in community activities, learn about your heritage, or support our
+              efforts, we welcome you to be part of the Society.
             </p>
           </div>
 
           <div className="membership__panel">
             <h3>Basic membership eligibility</h3>
             <div className="membership__eligibility">
-              <span className="membership__badge">Sudanese Origin</span>
+              <span className="membership__badge">
+                Welcoming any Sudani and Sudaniya
+              </span>
               <p>
-                <span>Membership is open</span> to people of Sudanese origin,
-                both men and women are welcome, and to Connecticut residents who
-                are part of the local Sudanese community.
+                We keep things relaxed with zero pressure or
+                strict rules!
               </p>
             </div>
 
             <ul className="membership__list">
               <li>
-                <span className="membership__highlight">Sudanese heritage</span>{" "}
-                and community ties are the foundation of eligibility.
+                <span className="membership__highlight">Sudani/Sudaniya</span>{" "}
+                - Heritage and community ties are the foundation of eligibility.
               </li>
               <li>
-                <span className="membership__highlight">
-                  Connecticut residency
-                </span>{" "}
-                is required for membership in the Society.
-              </li>
-              <li>
-                <span className="membership__highlight">
-                  Dependants and spouses{" "}
-                </span>
-                of Sudanese origin are welcome with family membership.
-              </li>
-              <li>
-                <span className="membership__highlight">Age 18 and under</span>{" "}
-                for individual membership does not pay;{" "}
-                <span className="membership__highlight">
-                  family memberships still require payment
-                </span>
-                .
-              </li>
-              <li>
-                <span className="membership__highlight">All members</span> are
-                encouraged to take part in programs, events, and community life.
+                <span className="membership__highlight">In Connecticut</span> - Ideal for CT residents or anyone who can
+                regularly join our events in CT.
               </li>
             </ul>
 
             <div className="membership__guest-note">
               <span className="membership__guest-note-label">
-                Non-Sudanese friends
+                Non-Sudanese spouses and dependants
               </span>
               <p>
-                If a member invites you to join one of our events or gatherings,
-                you are warmly welcome to come along and share in the community.
-                We are glad to celebrate with you.
+                Married to a Sudani/Sudaniya or a dependant of a member? You’re
+                already part of the family. Come on in and join us!
+              </p>
+            </div>
+
+            <div className="membership__guest-note">
+              <span className="membership__guest-note-label">
+                Coming as a guest?
+              </span>
+              <p>
+                Welcome! Whether you’re Sudanese or not, our doors are wide
+                open. Come share a meal, meet the community, and experience true
+                Sudanese{" "}
+                <span
+                  className="membership__mujamala"
+                  title="The art of active social courtesy, generosity, and presence."
+                >
+                  Mujamala
+                </span>{" "}
+                firsthand.
               </p>
             </div>
           </div>
@@ -76,8 +78,8 @@ const Membership = () => {
           <div className="membership__note" aria-live="polite">
             <strong>Unable to pay?</strong>
             <p>
-              Please reach out to us. We don't want financial circumstances to
-              keep you from being part of the community.
+              Please reach out to us. Money will never stand between family.
+              That’s just not the Sudani way.
             </p>
           </div>
         </div>
@@ -99,7 +101,8 @@ function FinalCTA() {
           Together, we build something that lasts.
         </h2>
         <p className="final-cta__quote">
-          A stronger community today. A stronger connection to Sudan tomorrow.
+          Strengthening our lives and community across Connecticut today, while
+          keeping our bond with Sudan alive for tomorrow.
         </p>
 
         <div className="final-cta__actions">

@@ -8,25 +8,29 @@ const supportPillars = [
 
 const SupportingSudan = () => {
   return (
-    <section className="supporting-sudan" aria-labelledby="supporting-sudan-title">
+    <section
+      className="supporting-sudan"
+      aria-labelledby="supporting-sudan-title"
+    >
       <div className="supporting-sudan__content">
         <div className="supporting-sudan__text-wrap">
-          <p className="supporting-sudan__eyebrow">Supporting Sudan</p>
+          <p className="supporting-sudan__eyebrow" title="Blue for Sudan">
+            Supporting Sudan
+          </p>
           <h2 id="supporting-sudan-title" className="supporting-sudan__title">
-            Our community doesn’t stop at the border.
+            Their struggles are our struggles.
           </h2>
 
           <blockquote className="supporting-sudan__quote">
-            We remain connected to our homeland by supporting people in Sudan
-            through fundraising, donations, and community-led efforts to provide
-            assistance to those in need.
+            Distance will never break our bond with Sudan. يد واحدة (as one
+            hand), we show up. Pooling our donations and community efforts to
+            deliver immediate aid and assistance to our families.
           </blockquote>
 
           <p className="supporting-sudan__text">
-            We do random but frequent donations to our beloved Sudanese people in
-            Sudan who are suffering from the consequences of hardship and crisis.
-            Through collective care and practical support, we stand in solidarity
-            with families experiencing deep need.
+            Through random but frequent, collective donations, and fundraising,
+            we stand with our people suffering in Sudan, delivering immediate,
+            practical relief and support to families facing deep crisis.
           </p>
 
           <div className="supporting-sudan__tags" aria-label="Support areas">
@@ -38,7 +42,10 @@ const SupportingSudan = () => {
           </div>
         </div>
 
-        <div className="supporting-sudan__visual" aria-label="Sudan support image">
+        <div
+          className="supporting-sudan__visual"
+          aria-label="Sudan support image"
+        >
           <div className="supporting-sudan__image-wrap">
             <img
               src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"

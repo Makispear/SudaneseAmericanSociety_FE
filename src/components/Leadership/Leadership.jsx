@@ -32,7 +32,7 @@ const leaders = [
     initials: "MB",
     name: "Mamoun Babikr",
     role: "Cultural Secretary",
-    bio: "Supporting Sudanese culture, heritage programs, and community identity initiatives.",
+    bio: "Supporting Sudani culture, heritage programs, and community identity initiatives.",
     level: "standard",
     image:
       "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=900&q=80",
@@ -76,11 +76,11 @@ const Leadership = () => {
     <section className="leadership" aria-labelledby="leadership-title">
       <div className="leadership__container">
         <p className="leadership__eyebrow">Leadership</p>
-        <h2 id="leadership-title">The people guiding our community.</h2>
+        <h2 id="leadership-title">The hands behind our community.</h2>
         <p className="leadership__note">
-          Community-elected leadership serving two-year terms. All paying
-          members, including dependants, can vote, and leadership reflects both
-          the north and south communities.
+          No suits here. Just neighbors volunteering for a two-year stint to
+          keep things moving. Vote in our next election, or better yet,
+          volunteer to run and take the wheel yourself!
         </p>
 
         <div className="leadership__top-grid">

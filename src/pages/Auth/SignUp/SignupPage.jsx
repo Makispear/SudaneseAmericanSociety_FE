@@ -384,15 +384,15 @@ function SignupPage() {
             >
               <div className="signup-branding__stat">
                 <strong>Community</strong>
-                <span>Support, belonging, and connection</span>
+                <span>Share and participate!</span>
               </div>
               <div className="signup-branding__stat">
                 <strong>Heritage</strong>
-                <span>Preserve culture and identity</span>
+                <span>Embrace our Sudani traditions!</span>
               </div>
               <div className="signup-branding__stat">
                 <strong>Service</strong>
-                <span>Show up for one another</span>
+                <span>Show up for one another.</span>
               </div>
             </div>
           </div>
@@ -406,9 +406,9 @@ function SignupPage() {
                 <h2>Account created</h2>
                 <p>{successMessage}</p>
                 <p className="signup-success__note">
-                  Creating an account does not automatically grant access to the
-                  WhatsApp group. Access is available to paying members once their
-                  membership is active.
+                  Creating an account does not automatically grant access to our
+                  WhatsApp group. Group access opens once your active community
+                  membership is verified.
                 </p>
                 <button
                   type="button"
@@ -582,10 +582,6 @@ function SignupPage() {
                         <option value="Individual">Individual</option>
                         <option value="Family">Family</option>
                       </select>
-                      <p className="membership-help">
-                        Individual members age 18 and under do not pay. Family
-                        memberships still require payment.
-                      </p>
                       {errors.membershipType ? (
                         <small className="field-error">
                           {errors.membershipType}

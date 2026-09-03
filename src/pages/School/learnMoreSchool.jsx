@@ -7,35 +7,38 @@ const schoolHighlights = [
   {
     title: "Who can join",
     description:
-      "This program is for paying family members of the Sudanese American Community who want to register their children for learning and cultural growth.",
+      "This program is created for our members who want to instill a deep love for our heritage, Islam, and culture in their children.",
   },
   {
     title: "Where it happens",
     description:
-      "Classes take place every Saturday and Sunday in Aldar, the building we rent for community gatherings and educational activities.",
+      "Classes take place every Saturday and Sunday at Aldar. Our rented space for community gatherings, learning, and connection.",
   },
   {
     title: "Additional cost",
     description:
-      "The school operates with a small symbolic contribution, a modest token to help cover essentials and support the program. More details are available after creating an account and speaking with the school team.",
+      "The school asks for only a small, symbolic contribution to help cover basic essentials. We keep things simple and accessible.",
   },
 ];
 
 const programs = [
   {
     icon: "📖",
-    title: "Arabic",
-    description: "Helping children strengthen their Arabic language and stay connected to the language of their roots.",
+    title: "Arabi عربي",
+    description:
+      "Helping children strengthen their Arabic language and stay connected to the language of their roots.",
   },
   {
     icon: "🕌",
-    title: "Quran & Deen Studies",
-    description: "Helping children build a strong foundation in Quranic learning, memorization, and Islamic character through patient guidance and meaningful study.",
+    title: "Quran & Islamic Studies",
+    description:
+      "Helping children build a strong foundation in Quranic learning, memorization, and Islamic character through patient guidance and meaningful study.",
   },
   {
     icon: "🇸🇩",
     title: "Sudanese Culture",
-    description: "Teaching Sudanese traditions, history, identity, and values so the next generation stays rooted in who they are.",
+    description:
+      "Teaching Sudanese traditions, history, identity, and values so the next generation stays rooted in who they are.",
   },
 ];
 
@@ -44,7 +47,7 @@ const teamMembers = [
     name: "Aboabida Maki",
     role: "Principal",
     description:
-      "Leading the school with care, structure, and a strong commitment to the children and families we serve.",
+      "Leading our school with care, structure, and dedication to our children.",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
   },
@@ -52,7 +55,7 @@ const teamMembers = [
     name: "Osman Albolok",
     role: "Vice Principal",
     description:
-      "Supporting daily operations and helping create a positive, encouraging environment for learning and growth.",
+      "Keeping school life running smoothly so our children can grow with confidence.",
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
   },
@@ -60,7 +63,7 @@ const teamMembers = [
     name: "Aladin Ali",
     role: "Treasurer",
     description:
-      "Managing school finances and helping ensure the program remains organized, sustainable, and well supported.",
+      "Managing resources to keep our children’s programs organized, strong, and sustainable.",
     image:
       "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80",
   },
@@ -68,7 +71,7 @@ const teamMembers = [
     name: "Hoda Idris",
     role: "Secretary",
     description:
-      "Helping families, supporting school operations, and caring for children with patience, warmth, and attentiveness.",
+      "Supporting our school operations and caring for our children with warmth and patience.",
     image:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
   },
@@ -82,11 +85,11 @@ function LearnMoreSchool() {
         <section className="school-hero">
           <div className="school-hero__content">
             <p className="eyebrow">School Program</p>
-            <h1 className="school-hero__title">Sudanese School at Aldar</h1>
+            <h1 className="school-hero__title">Weekend School at Aldar</h1>
             <p className="school-hero__text">
-              For paying family members of the Sudanese American Community,
-              our school offers a welcoming place for children to learn Quran,
-              Arabic, and Sudanese culture in a warm and supportive space.
+              This program is exclusively for our members. Helping fund our
+              community’s causes while giving our children a warm, supportive
+              home to learn Quran, Arabic, and Sudanese culture together.
             </p>
             <div className="school-hero__actions">
               <Link to="/signup" className="school-hero__primary">
@@ -118,11 +121,14 @@ function LearnMoreSchool() {
           </div>
         </section>
 
-        <section className="school-programs" aria-labelledby="school-programs-title">
+        <section
+          className="school-programs"
+          aria-labelledby="school-programs-title"
+        >
           <div className="section-heading">
             <p className="eyebrow">What We Teach</p>
             <h2 id="school-programs-title">
-              Rooted in faith, language, and culture.
+              Rooted in Islam, language, and culture.
             </h2>
           </div>
 
@@ -142,7 +148,9 @@ function LearnMoreSchool() {
         <section className="school-team" aria-labelledby="school-team-title">
           <div className="school-team__heading">
             <p className="eyebrow">Our Team</p>
-            <h2 id="school-team-title">The people guiding our school.</h2>
+            <h2 id="school-team-title">
+              The Hands & Hearts Caring for Our Children.
+            </h2>
           </div>
 
           <div className="school-team__grid">
@@ -164,17 +172,15 @@ function LearnMoreSchool() {
         <section className="school-cta" aria-labelledby="school-cta-title">
           <div className="school-cta__panel">
             <p className="eyebrow">School details</p>
-            <h2 id="school-cta-title">This is a community program built for families.</h2>
+            <h2 id="school-cta-title">
+              Created to inspire, guide, and uplift our children.
+            </h2>
             <p>
-              The school is held at Aldar every Saturday and Sunday, with a focus on
-              nurturing confident, connected children who grow stronger in their faith,
-              language, and identity. Membership is separate from the school’s modest
-              symbolic contribution, and more details are shared after creating an account
-              and speaking with the school team.
+              Held at Aldar every Saturday and Sunday, our school helps kids
+              grow in Islamic faith, language, and culture. Tuition is just a
+              modest token separate from membership. Our team will guide you
+              through the details once you sign up.
             </p>
-            <Link to="/signup" className="school-cta__button">
-              Create Account to Get Started
-            </Link>
           </div>
         </section>
       </main>

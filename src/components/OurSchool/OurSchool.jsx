@@ -3,7 +3,7 @@ import "./OurSchool.css";
 
 const schoolPrograms = [
   {
-    title: "Arabic",
+    title: "Arabi عربي",
     description: "Learn and preserve our language.",
   },
   {
@@ -11,8 +11,8 @@ const schoolPrograms = [
     description: "Build a strong foundation in Quranic learning.",
   },
   {
-    title: "Culture",
-    description: "Discover Sudanese traditions, history, and identity.",
+    title: "Sudani",
+    description: "Familiarize with the Sudani way.",
   },
 ];
 
@@ -37,12 +37,15 @@ const OurSchool = () => {
 
           <div className="our-school__content">
             <blockquote className="our-school__quote">
-              We believe our children should know where they come from. Through
-              Arabic, Quran, and Sudanese culture, we help the next generation
-              build a lasting connection to their heritage.
+              We give our children strong roots and confidence in who they are.
+              Through Arabic, Quran, and Sudanese culture, we guide them to
+              explore and take pride in their heritage.
             </blockquote>
 
-            <div className="our-school__programs" aria-label="Education programs">
+            <div
+              className="our-school__programs"
+              aria-label="Education programs"
+            >
               {schoolPrograms.map((program) => (
                 <article key={program.title} className="our-school__program">
                   <h3>{program.title}</h3>
@@ -51,8 +54,12 @@ const OurSchool = () => {
               ))}
             </div>
 
-            <Link to="/school" className="our-school__cta" aria-label="Learn about our school">
-              Learn About Our School <span aria-hidden="true">→</span>
+            <Link
+              to="/school"
+              className="our-school__cta"
+              aria-label="Learn about our school"
+            >
+              Take a Look Inside <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

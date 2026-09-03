@@ -1,6 +1,6 @@
 .supporting-sudan {
   width: 100%;
-  background: linear-gradient(135deg, #fff8f8 0%, #fdf2f2 48%, #fffaf7 100%);
+  background: linear-gradient(135deg, #75c2f187 0%, #f2f7fc 48%, #5c9ee0db 100%);
   color: #1b1b1b;
   padding: 88px 24px;
   box-sizing: border-box;
@@ -11,7 +11,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(185, 28, 28, 0.05), transparent 35%, rgba(26, 127, 61, 0.04));
+  background: linear-gradient(90deg, rgba(59, 155, 208, 0.05), transparent 35%, rgba(26, 127, 61, 0.04));
   pointer-events: none;
 }
 
@@ -35,7 +35,7 @@
 
 .supporting-sudan__eyebrow {
   margin: 0 0 18px;
-  color: #b91c1c;
+  color: #3b9bd0;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.18rem;
@@ -49,7 +49,7 @@
   height: 2px;
   margin-top: 10px;
   border-radius: 999px;
-  background: rgba(185, 28, 28, 0.5);
+  background: rgba(59, 155, 208, 0.5);
 }
 
 .supporting-sudan__title {
@@ -65,7 +65,7 @@
 .supporting-sudan__quote {
   margin: 0 0 18px;
   padding: 0 0 0 20px;
-  border-left: 3px solid rgba(185, 28, 28, 0.8);
+  border-left: 3px solid rgba(59, 155, 208, 0.8);
   color: #2b2b2b;
   font-size: clamp(1.08rem, 2vw, 1.45rem);
   line-height: 1.7;
@@ -93,9 +93,9 @@
   align-items: center;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(185, 28, 28, 0.08);
-  border: 1px solid rgba(185, 28, 28, 0.12);
-  color: #7a1717;
+  background: rgba(59, 155, 208, 0.08);
+  border: 1px solid rgba(59, 155, 208, 0.12);
+  color: #1a5a8a;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
@@ -114,8 +114,8 @@
   max-width: 520px;
   border-radius: 28px;
   overflow: hidden;
-  border: 2px solid rgba(185, 28, 28, 0.12);
-  box-shadow: 0 24px 46px rgba(99, 21, 21, 0.12);
+  border: 2px solid rgba(59, 155, 208, 0.12);
+  box-shadow: 0 24px 46px rgba(59, 155, 208, 0.12);
 }
 
 .supporting-sudan__image-wrap img {
@@ -139,7 +139,7 @@
 .supporting-sudan__overlay-label {
   display: block;
   margin-bottom: 8px;
-  color: #b91c1c;
+  color: #3b9bd0;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.12rem;

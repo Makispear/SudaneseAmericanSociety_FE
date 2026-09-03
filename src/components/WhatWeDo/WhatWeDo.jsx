@@ -6,7 +6,7 @@ const WhatWeDo = () => {
       icon: "📚",
       title: "Our Children's Education & Heritage",
       description:
-        "Keeping Arabic, Quran, Sudanese culture, and our connection to Sudan alive for the next generation.",
+        "Keeping Arabic, Quran, Sudani culture, and our connection to Sudan alive for the next generation.",
     },
     {
       icon: "🤝",
@@ -52,13 +52,16 @@ const WhatWeDo = () => {
           ))}
         </div>
 
-        <div className="what-we-do__membership-note" aria-label="Membership access notice">
-          <span className="what-we-do__membership-label">Member access</span>
+        <div
+          className="what-we-do__membership-note"
+          aria-label="Membership access notice"
+        >
+          <span className="what-we-do__membership-label">
+            We're on WhatsApp, too!
+          </span>
           <p>
-            Paying members receive access to our WhatsApp community group for updates,
-            reminders, and family announcements. Creating an account alone does not
-            grant access. For individual memberships, anyone age 18 or under does not
-            pay; family memberships still require payment.
+            Active members get access to our private casual chat for quick updates,
+            event reminders, and community news.
           </p>
         </div>
       </div>
