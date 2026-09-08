@@ -12,7 +12,7 @@ const WhatWeDo = () => {
       icon: "🤝",
       title: "Community Support",
       description:
-        "Standing beside one another through difficult times, including funerals, loss, and other moments when our community needs us.",
+        "Standing beside our brothers and sisters through difficult times, including funerals, loss, and other moments when our community needs us.",
     },
     {
       icon: "🎉",
@@ -60,8 +60,8 @@ const WhatWeDo = () => {
             We're on WhatsApp, too!
           </span>
           <p>
-            Active members get access to our private casual chat for quick updates,
-            event reminders, and community news.
+            Active members get access to our private casual chat for quick
+            updates, event reminders, and community news.
           </p>
         </div>
       </div>

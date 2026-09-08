@@ -23,7 +23,7 @@ const leaders = [
     initials: "AA",
     name: "Ahmed Alfakih",
     role: "Sports Secretary",
-    bio: "Helping organize sports, youth activities, and community engagement opportunities.",
+    bio: "Helping organize sports, youth activities, and community engagement for boys, girls, men, and women.",
     level: "standard",
     image:
       "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80",
@@ -78,9 +78,10 @@ const Leadership = () => {
         <p className="leadership__eyebrow">Leadership</p>
         <h2 id="leadership-title">The hands behind our community.</h2>
         <p className="leadership__note">
-          No suits here. Just neighbors volunteering for a two-year stint to
-          keep things moving. Vote in our next election, or better yet,
-          volunteer to run and take the wheel yourself!
+          No formalities here. Just neighbors volunteering for a two-year stint
+          to keep things moving. Vote in our next election, or better yet, we
+          encourage all our brothers and sisters to volunteer to run and take
+          the wheel yourself!
         </p>
 
         <div className="leadership__top-grid">

@@ -1,7 +1,7 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+import API_URL from "../services/api.js";
 
 export async function createAccount(data) {
-  const response = await fetch(`${API_BASE_URL}/accounts/createAccount`, {
+  const response = await fetch(`${API_URL}/api/accounts/createAccount`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -17,7 +17,9 @@ export async function createAccount(data) {
   }
 
   if (!response.ok) {
-    throw new Error(payload?.message || "Unable to create your account right now.");
+    throw new Error(
+      payload?.message || "Unable to create your account right now.",
+    );
   }
 
   return payload;

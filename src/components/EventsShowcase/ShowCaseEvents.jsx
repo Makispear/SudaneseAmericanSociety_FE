@@ -37,7 +37,7 @@ const eventHighlights = [
     title: "Independence Day",
     category: "Culture",
     description:
-      "We honor Sudan’s independence with pride, reflection, and community recognition. Party hard for our country!",
+      "We honor Sudan’s independence with pride, reflection, and community recognition. Celebrate our country with pride and joy!",
     image:
       "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80",
   },

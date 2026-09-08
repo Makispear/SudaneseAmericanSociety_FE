@@ -413,9 +413,9 @@ function SignupPage() {
                 <button
                   type="button"
                   className="signup-success__button"
-                  onClick={() => navigate("/verify-email")}
+                  onClick={() => navigate("/login")}
                 >
-                  Continue to Email Verification
+                  Login
                 </button>
               </div>
             ) : (

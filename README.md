@@ -25,7 +25,7 @@ The app uses the environment variable `VITE_API_BASE_URL` for API requests.
 Create a `.env.local` file in the project root with:
 
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+API_BASE_URL=http://localhost:5000/api
 ```
 
 If your backend is running on a different port or domain, replace the value with that URL.
