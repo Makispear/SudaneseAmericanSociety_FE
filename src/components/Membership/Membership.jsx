@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Membership.css";
 
 const Membership = () => {
+  const [expandedMobile, setExpandedMobile] = useState(false);
+
   return (
     <>
       <section
@@ -23,64 +26,76 @@ const Membership = () => {
             </p>
           </div>
 
-          <div className="membership__panel">
+          <div
+            className={`membership__panel ${expandedMobile ? "membership__panel--expanded" : ""}`}
+          >
             <h3>Basic membership eligibility</h3>
             <div className="membership__eligibility">
               <span className="membership__badge">
                 Welcoming any Sudani and Sudaniya
               </span>
-              <p>
-                We keep things relaxed with zero pressure or
-                strict rules!
-              </p>
+              <p>We keep things relaxed with zero pressure or strict rules!</p>
             </div>
 
             <ul className="membership__list">
               <li>
-                <span className="membership__highlight">Sudani/Sudaniya</span>{" "}
-                - Heritage and community ties are the foundation of eligibility.
+                <span className="membership__highlight">Sudani/Sudaniya</span> -
+                Heritage and community ties are the foundation of eligibility.
               </li>
               <li>
-                <span className="membership__highlight">In Connecticut</span> - Ideal for CT residents or anyone who can
-                regularly join our events in CT.
+                <span className="membership__highlight">In Connecticut</span> -
+                Ideal for CT residents or anyone who can regularly join our
+                events in CT.
               </li>
             </ul>
 
-            <div className="membership__guest-note">
-              <span className="membership__guest-note-label">
-                Non-Sudanese spouses and dependants
-              </span>
-              <p>
-                Married to a Sudani/Sudaniya or a dependant of a member? You’re
-                already part of the family. Come on in and join us!
-              </p>
+            {/* Content hidden inside collapsible container on mobile */}
+            <div className="membership__collapsible-content">
+              <div className="membership__guest-note">
+                <span className="membership__guest-note-label">
+                  Non-Sudanese spouses and dependants
+                </span>
+                <p>
+                  Married to a Sudani/Sudaniya or a dependant of a member?
+                  You’re already part of the family. Come on in and join us!
+                </p>
+              </div>
+
+              <div className="membership__guest-note">
+                <span className="membership__guest-note-label">
+                  Coming as a guest?
+                </span>
+                <p>
+                  Welcome! Whether you’re Sudanese or not, our doors are wide
+                  open. Come share a meal, meet the community, and experience
+                  true Sudanese{" "}
+                  <span
+                    className="membership__mujamala"
+                    title="The art of active social courtesy, generosity, and presence."
+                  >
+                    Mujamala
+                  </span>{" "}
+                  firsthand.
+                </p>
+              </div>
+
+              <div className="membership__note" aria-live="polite">
+                <strong>Unable to pay?</strong>
+                <p>
+                  Please reach out to us. Money will never stand between family.
+                  That’s just not the Sudani way.
+                </p>
+              </div>
             </div>
 
-            <div className="membership__guest-note">
-              <span className="membership__guest-note-label">
-                Coming as a guest?
-              </span>
-              <p>
-                Welcome! Whether you’re Sudanese or not, our doors are wide
-                open. Come share a meal, meet the community, and experience true
-                Sudanese{" "}
-                <span
-                  className="membership__mujamala"
-                  title="The art of active social courtesy, generosity, and presence."
-                >
-                  Mujamala
-                </span>{" "}
-                firsthand.
-              </p>
-            </div>
-          </div>
-
-          <div className="membership__note" aria-live="polite">
-            <strong>Unable to pay?</strong>
-            <p>
-              Please reach out to us. Money will never stand between family.
-              That’s just not the Sudani way.
-            </p>
+            {/* Mobile-only expand/collapse button */}
+            <button
+              type="button"
+              className="membership__mobile-toggle"
+              onClick={() => setExpandedMobile(!expandedMobile)}
+            >
+              {expandedMobile ? "Show Less" : "Read More Details"}
+            </button>
           </div>
         </div>
       </section>

@@ -1,0 +1,38 @@
+/* Hidden by default on desktop */
+.values__mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  /* Hide cards past the first 2 by default on mobile */
+  .value-card--mobile-hidden {
+    display: none;
+  }
+
+  /* Reveal all cards when expanded */
+  .values__grid--expanded .value-card--mobile-hidden {
+    display: block;
+  }
+
+  /* Toggle container style */
+  .values__toggle-wrap {
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  /* Style the mobile toggle button */
+  .values__mobile-toggle {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(20, 111, 57, 0.25);
+    border-radius: 999px;
+    background: rgba(20, 111, 57, 0.08);
+    color: #146f39;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+  }
+}

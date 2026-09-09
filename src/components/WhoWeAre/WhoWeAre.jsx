@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./WhoWeAre.css";
 
 const WhoWeAre = () => {
+  const [expandedMobile, setExpandedMobile] = useState(false);
+
   return (
     <section className="who-we-are" aria-labelledby="who-we-are-title">
       <div className="who-we-are__content">
@@ -9,10 +12,26 @@ const WhoWeAre = () => {
           <h2 id="who-we-are-title" className="who-we-are__title">
             A community connected by heritage, strengthened by unity.
           </h2>
-          <p className="who-we-are__text">
-            We bring together Sudanese across Connecticut to build meaningful
-            connections, celebrate our heritage, and support one another.
-          </p>
+
+          {/* Collapsible paragraph on mobile */}
+          <div
+            className={`who-we-are-collapsible ${expandedMobile ? "who-we-are-collapsible--expanded" : ""}`}
+          >
+            <p className="who-we-are__text">
+              We bring together Sudanese across Connecticut to build meaningful
+              connections, celebrate our heritage, and support one another.
+            </p>
+          </div>
+
+          {/* Mobile-only toggle button */}
+          <button
+            type="button"
+            className="who-we-are__mobile-toggle"
+            onClick={() => setExpandedMobile(!expandedMobile)}
+          >
+            {expandedMobile ? "Show Less" : "Read More"}
+          </button>
+
           <div className="who-we-are__actions">
             <span className="who-we-are__tag">
               Community • Culture • Belonging

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./ShowCaseEvents.css";
 
 const eventHighlights = [
@@ -107,9 +108,11 @@ const eventHighlights = [
 ];
 
 const ShowCaseEvents = () => {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <section
-      className="events-showcase"
+      className={`events-showcase ${showAll ? "events-showcase--expanded" : ""}`}
       aria-labelledby="events-showcase-title"
     >
       <div className="events-showcase__container">
@@ -151,11 +154,13 @@ const ShowCaseEvents = () => {
           </div>
         </div>
 
-        <div className="events-showcase__grid">
+        <div className={`events-showcase__grid ${showAll ? "events-showcase__grid--expanded" : ""}`}>
           {eventHighlights.map((event, index) => (
             <article
               key={event.title}
-              className={`events-showcase__card events-showcase__card--${index % 5}`}
+              className={`events-showcase__card events-showcase__card--${index % 5} ${
+                index >= 4 ? "events-showcase__card--hidden" : ""
+              }`}
             >
               <div className="events-showcase__image-wrap">
                 <img src={event.image} alt={event.title} />
@@ -165,6 +170,16 @@ const ShowCaseEvents = () => {
               <p>{event.description}</p>
             </article>
           ))}
+        </div>
+
+        {/* Toggle button */}
+        <div className="events-showcase__toggle-wrap">
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="events-showcase__toggle-btn"
+          >
+            {showAll ? "Show Less" : `View All Events (${eventHighlights.length})`}
+          </button>
         </div>
       </div>
     </section>

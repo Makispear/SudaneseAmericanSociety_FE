@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const Footer = () => {
@@ -16,10 +17,10 @@ const Footer = () => {
         <div className="site-footer__column">
           <h4>Explore</h4>
           <nav className="site-footer__links" aria-label="Footer navigation">
-            <a href="/about">About Us</a>
-            <a href="/school">School</a>
-            <a href="/#membership">Membership</a>
-            <a href="/signup">Become a Member</a>
+            <Link to="/about">About Us</Link>
+            <Link to="/school">School</Link>
+            <Link to="/#membership">Membership</Link>
+            <Link to="/signup">Become a Member</Link>
           </nav>
         </div>
 

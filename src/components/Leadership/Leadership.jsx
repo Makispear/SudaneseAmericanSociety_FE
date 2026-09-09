@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Leadership.css";
 
 const leaders = [
@@ -72,6 +73,8 @@ const supportingLeaders = leaders.filter(
 );
 
 const Leadership = () => {
+  const [expandedMobile, setExpandedMobile] = useState(false);
+
   return (
     <section className="leadership" aria-labelledby="leadership-title">
       <div className="leadership__container">
@@ -102,23 +105,37 @@ const Leadership = () => {
           ))}
         </div>
 
-        <div className="leadership__grid">
-          {supportingLeaders.map((person) => (
-            <article
-              key={person.name}
-              className="leadership__card leadership__card--standard"
-            >
-              <div className="leadership__photo" aria-label={person.name}>
-                <img src={person.image} alt={person.name} />
-              </div>
-              <div className="leadership__body">
-                <h3>{person.name}</h3>
-                <p className="leadership__role">{person.role}</p>
-                <p className="leadership__bio">{person.bio}</p>
-              </div>
-            </article>
-          ))}
+        {/* Collapsible container for supporting leaders on mobile */}
+        <div
+          className={`leadership-collapsible ${expandedMobile ? "leadership-collapsible--expanded" : ""}`}
+        >
+          <div className="leadership__grid">
+            {supportingLeaders.map((person) => (
+              <article
+                key={person.name}
+                className="leadership__card leadership__card--standard"
+              >
+                <div className="leadership__photo" aria-label={person.name}>
+                  <img src={person.image} alt={person.name} />
+                </div>
+                <div className="leadership__body">
+                  <h3>{person.name}</h3>
+                  <p className="leadership__role">{person.role}</p>
+                  <p className="leadership__bio">{person.bio}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
+
+        {/* Mobile-only toggle button */}
+        <button
+          type="button"
+          className="leadership__mobile-toggle"
+          onClick={() => setExpandedMobile(!expandedMobile)}
+        >
+          {expandedMobile ? "Show Less" : "View All Committee Members"}
+        </button>
       </div>
     </section>
   );

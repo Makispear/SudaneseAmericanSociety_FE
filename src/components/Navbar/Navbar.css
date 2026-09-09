@@ -66,20 +66,19 @@
   transform: translateY(0);
 }
 
-.logoLink {
-  display: flex;
-  width: 100%;
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  text-decoration: none;
-  color: inherit;
-}
-
 .logoWrap {
   display: flex;
   align-items: center;
   gap: 12px;
   width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+.logoLink {
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logoIcon {
@@ -90,6 +89,11 @@
   border: 2px solid rgba(26, 127, 61, 0.2);
   box-shadow: 0 8px 22px rgba(26, 127, 61, 0.2);
   display: block;
+  transition: transform 0.2s ease;
+}
+
+.logoLink:hover .logoIcon {
+  transform: scale(1.05);
 }
 
 .logoText {

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./OurSchool.css";
 
@@ -17,6 +18,8 @@ const schoolPrograms = [
 ];
 
 const OurSchool = () => {
+  const [expandedMobile, setExpandedMobile] = useState(false);
+
   return (
     <section className="our-school" aria-labelledby="our-school-title">
       <div className="our-school__container">
@@ -42,17 +45,29 @@ const OurSchool = () => {
               explore and take pride in their heritage.
             </blockquote>
 
-            <div
-              className="our-school__programs"
-              aria-label="Education programs"
-            >
-              {schoolPrograms.map((program) => (
-                <article key={program.title} className="our-school__program">
-                  <h3>{program.title}</h3>
-                  <p>{program.description}</p>
-                </article>
-              ))}
+            {/* Collapsible content wrapper on mobile */}
+            <div className={`our-school-collapsible ${expandedMobile ? "our-school-collapsible--expanded" : ""}`}>
+              <div
+                className="our-school__programs"
+                aria-label="Education programs"
+              >
+                {schoolPrograms.map((program) => (
+                  <article key={program.title} className="our-school__program">
+                    <h3>{program.title}</h3>
+                    <p>{program.description}</p>
+                  </article>
+                ))}
+              </div>
             </div>
+
+            {/* Mobile-only toggle button */}
+            <button
+              type="button"
+              className="our-school__mobile-toggle"
+              onClick={() => setExpandedMobile(!expandedMobile)}
+            >
+              {expandedMobile ? "Show Less" : "View Programs"}
+            </button>
 
             <Link
               to="/school"

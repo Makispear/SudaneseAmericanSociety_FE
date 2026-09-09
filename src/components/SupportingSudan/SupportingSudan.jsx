@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./SupportingSudan.css";
 
 const supportPillars = [
@@ -7,6 +8,8 @@ const supportPillars = [
 ];
 
 const SupportingSudan = () => {
+  const [expandedMobile, setExpandedMobile] = useState(false);
+
   return (
     <section
       className="supporting-sudan"
@@ -27,11 +30,26 @@ const SupportingSudan = () => {
             deliver immediate aid and assistance to our families.
           </blockquote>
 
-          <p className="supporting-sudan__text">
-            Through random but frequent, collective donations, and fundraising,
-            we stand with our people suffering in Sudan, delivering immediate,
-            practical relief and support to families facing deep crisis.
-          </p>
+          {/* Hidden on mobile until toggled */}
+          <div
+            className={`supporting-sudan-collapsible ${expandedMobile ? "supporting-sudan-collapsible--expanded" : ""}`}
+          >
+            <p className="supporting-sudan__text">
+              Through random but frequent, collective donations, and
+              fundraising, we stand with our people suffering in Sudan,
+              delivering immediate, practical relief and support to families
+              facing deep crisis.
+            </p>
+          </div>
+
+          {/* Mobile-only toggle button */}
+          <button
+            type="button"
+            className="supporting-sudan__mobile-toggle"
+            onClick={() => setExpandedMobile(!expandedMobile)}
+          >
+            {expandedMobile ? "Show Less" : "Read More"}
+          </button>
 
           <div className="supporting-sudan__tags" aria-label="Support areas">
             {supportPillars.map((item) => (

@@ -40,6 +40,12 @@ const WhatWeDo = () => {
           each other.
         </p>
 
+        {/* Mobile swipe hint */}
+        <div className="what-we-do__swipe-hint" aria-hidden="true">
+          <span>Swipe to explore</span>
+          <span className="what-we-do__swipe-arrow">→</span>
+        </div>
+
         <div className="what-we-do__grid">
           {cards.map((card) => (
             <article key={card.title} className="what-we-do__card">

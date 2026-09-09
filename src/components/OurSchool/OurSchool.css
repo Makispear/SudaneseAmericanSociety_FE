@@ -56,7 +56,11 @@
   overflow: hidden;
   border-radius: 26px;
   min-height: 420px;
-  background: linear-gradient(135deg, rgba(20, 111, 57, 0.12), rgba(185, 28, 28, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(20, 111, 57, 0.12),
+    rgba(185, 28, 28, 0.08)
+  );
   border: 1px solid rgba(17, 17, 17, 0.06);
   box-shadow: 0 18px 40px rgba(7, 38, 21, 0.08);
 }
@@ -123,7 +127,10 @@
   font-size: 0.98rem;
   font-weight: 700;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
   box-shadow: 0 12px 24px rgba(20, 111, 57, 0.18);
 }
 
@@ -135,6 +142,11 @@
 .our-school__cta span {
   font-size: 1.3rem;
   line-height: 1;
+}
+
+/* Hidden by default on desktop */
+.our-school__mobile-toggle {
+  display: none;
 }
 
 @media (max-width: 900px) {
@@ -149,16 +161,52 @@
 
 @media (max-width: 640px) {
   .our-school {
-    padding: 72px 18px;
+    padding: 56px 18px;
+  }
+
+  .our-school__content {
+    gap: 16px;
   }
 
   .our-school__visual,
   .our-school__visual img {
-    min-height: 300px;
+    min-height: 260px;
   }
 
   .our-school__quote {
     padding-left: 16px;
+    font-size: 1rem;
+  }
+
+  /* Hide the programs grid by default on mobile */
+  .our-school-collapsible {
+    display: none;
+  }
+
+  /* Reveal it when toggled */
+  .our-school-collapsible--expanded {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .our-school__programs {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Style the mobile toggle button */
+  .our-school__mobile-toggle {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(20, 111, 57, 0.25);
+    border-radius: 999px;
+    background: rgba(20, 111, 57, 0.08);
+    color: #146f39;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
   }
 
   .our-school__cta {

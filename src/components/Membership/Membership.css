@@ -162,7 +162,7 @@
   border-radius: 18px;
   background: linear-gradient(
     135deg,
-    rgba(185, 28, 28, 0.267),
+    rgba(217, 220, 117, 0.267),
     rgba(20, 111, 57, 0.04)
   );
 }
@@ -183,21 +183,14 @@
   line-height: 1.75;
 }
 
-.membership__type {
-  font-weight: 800;
-}
-
-.membership__type--individual {
-  color: #d4a574;
-}
-
-.membership__type--family {
-  color: #5eb3de;
-}
-
 .membership__mujamala {
   color: #c9a448;
   font-weight: 800;
+}
+
+/* Hidden by default on desktop */
+.membership__mobile-toggle {
+  display: none;
 }
 
 .final-cta {
@@ -289,6 +282,37 @@
   .final-cta {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  /* Hide desktop note container on mobile since it's now inside the toggle block */
+  .membership__note--desktop {
+    display: none;
+  }
+
+  /* Hide extra notes by default on mobile */
+  .membership__collapsible-content {
+    display: none;
+  }
+
+  /* Show them when expanded */
+  .membership__panel--expanded .membership__collapsible-content {
+    display: block;
+  }
+
+  /* Style the Read More / Show Less button on mobile */
+  .membership__mobile-toggle {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 12px;
+    border: 1px solid rgba(20, 111, 57, 0.2);
+    border-radius: 999px;
+    background: rgba(20, 111, 57, 0.08);
+    color: #0d4023;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
   }
 
   .final-cta__actions {

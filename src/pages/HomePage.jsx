@@ -7,7 +7,6 @@ import OurSchool from "../components/OurSchool/OurSchool.jsx";
 import SupportingSudan from "../components/SupportingSudan/SupportingSudan.jsx";
 import ShowCaseEvents from "../components/EventsShowcase/ShowCaseEvents.jsx";
 // import OurCommunity from "../components/OurCommunity/OurCommunity.jsx";
-import Leadership from "../components/Leadership/Leadership.jsx";
 import Footer from "../components/Footer/footer.jsx";
 
 const HomePage = () => {
@@ -22,7 +21,6 @@ const HomePage = () => {
       <ShowCaseEvents />
       <Membership />
       {/* <OurCommunity /> */}
-      <Leadership />
       <Footer />
     </section>
   );
