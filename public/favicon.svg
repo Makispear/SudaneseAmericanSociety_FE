@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  {/* Crossed Flag Poles */}
+  <line x1="8" y1="2" x2="24" y2="30" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="24" y1="2" x2="8" y2="30" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" />
+
+  {/* LEFT FLAG: Sudan */}
+  <g>
+    {/* Flag Fabric Path (Waving) */}
+    <path d="M 4 5 Q 9 3, 14 6 Q 16 7, 16 17 Q 11 19, 6 16 Q 4 15, 4 5 Z" fill="#ffffff" stroke="#d4af37" stroke-width="0.75" />
+    {/* Sudanese Horizontal Bars (Red, White, Black) clipped/layered */}
+    <path d="M 4 5 Q 9 3, 14 6 L 14 10 Q 9 7, 4 9 Z" fill="#D21034" />
+    <path d="M 4 9 Q 9 7, 14 10 L 14 13 Q 9 10, 4 12 Z" fill="#ffffff" />
+    <path d="M 4 12 Q 9 10, 14 13 L 14 17 Q 9 15, 6 16 Q 4 15, 4 12 Z" fill="#111111" />
+    {/* Sudanese Green Triangle (Chevron) */}
+    <path d="M 4 5 Q 9 3, 11 11 Q 9 15, 4 16 Z" fill="#0d5c2f" />
+  </g>
+
+  {/* RIGHT FLAG: USA */}
+  <g>
+    {/* Flag Fabric Path (Waving) */}
+    <path d="M 18 6 Q 23 3, 28 5 Q 28 15, 26 16 Q 21 19, 16 17 Q 16 7, 18 6 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.75" />
+    {/* US White Stripes */}
+    <rect x="16" y="8" width="12" height="1.2" fill="#ffffff" />
+    <rect x="16" y="11" width="12" height="1.2" fill="#ffffff" />
+    <rect x="16" y="14" width="12" height="1.2" fill="#ffffff" />
+    {/* US Navy Blue Canton */}
+    <path d="M 16 6 Q 20 5, 22 5 L 22 12 L 16 13 Z" fill="#1d3557" />
+    {/* Tiny abstract stars representation */}
+    <circle cx="17.5" cy="7.5" r="0.4" fill="#ffffff" />
+    <circle cx="19.5" cy="7.5" r="0.4" fill="#ffffff" />
+    <circle cx="18.5" cy="9.5" r="0.4" fill="#ffffff" />
+    <circle cx="20.5" cy="9.5" r="0.4" fill="#ffffff" />
+  </g>
+
+  {/* Central Gold Finials / Intersection Cap */}
+  <circle cx="16" cy="15" r="1.5" fill="#d4af37" />
+  <circle cx="8" cy="2" r="1" fill="#d4af37" />
+  <circle cx="24" cy="2" r="1" fill="#d4af37" />
+</svg>
