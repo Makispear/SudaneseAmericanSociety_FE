@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Navbar from "../../../components/Navbar/Navbar.jsx";
 import { loginUser } from "../../../services/accountService.js";
 import "./LoginPage.css";
@@ -9,7 +9,7 @@ function LoginPage() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    rememberMe: false, // <-- Added rememberMe state
+    rememberMe: false,
   });
   const [errors, setErrors] = useState({});
   const [apiError, setApiError] = useState("");
@@ -60,7 +60,7 @@ function LoginPage() {
       await loginUser({
         email: formData.email.trim(),
         password: formData.password,
-        rememberMe: formData.rememberMe, // <-- Passed rememberMe to backend service
+        rememberMe: formData.rememberMe,
       });
       setErrors({});
       navigate("/");
@@ -172,7 +172,7 @@ function LoginPage() {
                   ) : null}
                 </div>
 
-                <div className="field field--full login-remember-wrapper">
+                <div className="login-options-row">
                   <label className="login-checkbox-label">
                     <input
                       type="checkbox"
@@ -184,6 +184,10 @@ function LoginPage() {
                     />
                     <span>Remember me</span>
                   </label>
+
+                  <Link to="/forgot-password" className="forgot-password-link">
+                    Forgot password?
+                  </Link>
                 </div>
               </div>
 

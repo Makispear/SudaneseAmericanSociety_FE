@@ -48,3 +48,21 @@ export const loginUser = async (credentials) => {
 
   return response.json();
 };
+
+export async function requestPasswordReset({ email }) {
+  const response = await fetch(`${API_URL}/api/auth/forgotPassword`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Failed to request password reset.");
+  }
+
+  return data;
+}
