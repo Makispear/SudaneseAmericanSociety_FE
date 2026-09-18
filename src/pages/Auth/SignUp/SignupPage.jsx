@@ -118,6 +118,11 @@ function SignupPage() {
     [formData.membershipType],
   );
 
+  const isCurrentStepValid = useMemo(() => {
+    const stepErrors = validateStep(currentStep);
+    return Object.keys(stepErrors).length === 0;
+  }, [formData, currentStep]);
+
   const stepLabel =
     currentStep === 1
       ? "Basic Information"
@@ -193,7 +198,7 @@ function SignupPage() {
     });
   };
 
-  const validateStep = (step) => {
+  function validateStep(step) {
     const nextErrors = {};
 
     if (step === 1) {
@@ -278,7 +283,7 @@ function SignupPage() {
     }
 
     return nextErrors;
-  };
+  }
 
   const handleNextStep = () => {
     const nextErrors = validateStep(currentStep);
@@ -368,7 +373,8 @@ function SignupPage() {
       <Navbar />
       <main className="signup-page">
         <section className="signup-layout" aria-labelledby="signup-title">
-          <div className="signup-branding">
+          {/* Hidden on mobile viewports */}
+          <div className="signup-branding signup-branding--desktop-only">
             <span className="signup-branding__badge">
               Welcome to the community
             </span>
@@ -858,7 +864,7 @@ function SignupPage() {
                     <button
                       type="submit"
                       className="signup-form__submit"
-                      disabled={isSubmitting}
+                      disabled={!isCurrentStepValid || isSubmitting}
                     >
                       {isSubmitting ? "Creating account..." : "Create Account"}
                     </button>
@@ -867,11 +873,23 @@ function SignupPage() {
                       type="button"
                       className="signup-form__submit"
                       onClick={handleNextStep}
-                      disabled={isSubmitting}
+                      disabled={!isCurrentStepValid || isSubmitting}
                     >
                       Continue
                     </button>
                   )}
+                </div>
+
+                {/* Added Login Prompt */}
+                <div className="signup-login-prompt">
+                  <span>Already have an account?</span>
+                  <button
+                    type="button"
+                    className="signup-login-button"
+                    onClick={() => navigate("/login")}
+                  >
+                    Login
+                  </button>
                 </div>
               </form>
             )}

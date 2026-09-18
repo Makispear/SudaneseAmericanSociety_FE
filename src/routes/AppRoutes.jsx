@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage.jsx";
 import AboutPage from "../pages/About/AboutPage.jsx";
 import LearnMoreSchool from "../pages/School/learnMoreSchool.jsx";
 import SignupPage from "../pages/Auth/SignUp/SignupPage.jsx";
+import LoginPage from "../pages/Auth/Login/LoginPage.jsx";
 import EmailVerificationPage from "../pages/Email/Verification/EmailVerificationPage.jsx";
 // import FamilyMembershipPage from "../pages/FamilyMembershipPage";
 // import EventsPage from "../pages/EventsPage";
@@ -22,6 +23,7 @@ function AppRoutes() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/school" element={<LearnMoreSchool />} />
       <Route path="/signup" element={<SignupPage />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/verify-email" element={<EmailVerificationPage />} />
       {/* <Route path="/family-membership" element={<FamilyMembershipPage />} /> */}
       {/* <Route path="/events" element={<EventsPage />} /> */}

@@ -24,3 +24,22 @@ export async function createAccount(data) {
 
   return payload;
 }
+
+export const loginUser = async (credentials) => {
+  const API_URL = import.meta.env.VITE_API_URL || "";
+
+  const response = await fetch(`${API_URL}/api/auth/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || "Invalid email or password.");
+  }
+
+  return response.json();
+};
