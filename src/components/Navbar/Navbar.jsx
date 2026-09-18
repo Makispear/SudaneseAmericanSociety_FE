@@ -72,8 +72,8 @@ const Navbar = () => {
           <Link to="/login" className="navbar__mobile-link navbar__highlight" onClick={closeMenu}>
             Login
           </Link>
-          <Link to="/join" className="navbar__mobile-link navbar__highlight" onClick={closeMenu}>
-            Join Page
+          <Link to="/signup" className="navbar__mobile-link navbar__highlight" onClick={closeMenu}>
+            Sign Up
           </Link>
           <Link to="/about" className="navbar__mobile-link" onClick={closeMenu}>
             About
