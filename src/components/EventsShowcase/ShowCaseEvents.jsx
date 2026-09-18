@@ -10,14 +10,7 @@ const eventHighlights = [
     image:
       "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80",
   },
-  {
-    title: "Eid al-Mawlid",
-    category: "Celebration",
-    description:
-      "A joyful gathering honoring the Prophet’s birthday with reflection, togetherness, and gratitude.",
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
-  },
+
   {
     title: "Eid al-Fitr",
     category: "Celebration",
@@ -154,7 +147,9 @@ const ShowCaseEvents = () => {
           </div>
         </div>
 
-        <div className={`events-showcase__grid ${showAll ? "events-showcase__grid--expanded" : ""}`}>
+        <div
+          className={`events-showcase__grid ${showAll ? "events-showcase__grid--expanded" : ""}`}
+        >
           {eventHighlights.map((event, index) => (
             <article
               key={event.title}
@@ -174,11 +169,13 @@ const ShowCaseEvents = () => {
 
         {/* Toggle button */}
         <div className="events-showcase__toggle-wrap">
-          <button 
+          <button
             onClick={() => setShowAll(!showAll)}
             className="events-showcase__toggle-btn"
           >
-            {showAll ? "Show Less" : `View All Events (${eventHighlights.length})`}
+            {showAll
+              ? "Show Less"
+              : `View All Events (${eventHighlights.length})`}
           </button>
         </div>
       </div>
