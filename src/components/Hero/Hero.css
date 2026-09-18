@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   min-height: 560px;
-  padding: 56px 24px;
+  padding: 130px 24px 56px 24px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.42), rgba(185, 28, 28, 0.38)),
     url("../../assets/LandingPage/groupPicture.jpeg");
@@ -118,7 +118,7 @@
 @media (max-width: 640px) {
   .hero-section {
     min-height: 440px;
-    padding: 36px 18px;
+    padding: 100px 18px 36px 18px;
   }
 
   .hero-section__content {
