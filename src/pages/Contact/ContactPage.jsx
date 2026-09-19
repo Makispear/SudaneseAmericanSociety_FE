@@ -61,7 +61,7 @@ function ContactPage() {
                     title="Click to copy email address"
                   >
                     <span className="email-address">
-                      Info@ctsudanese.org[cite: 1]
+                      Info@ctsudanese.org
                     </span>
                     <span
                       className={`copy-badge ${copied ? "copy-badge--success" : ""}`}
