@@ -349,6 +349,58 @@
   color: #a7f3d0 !important;
   background: rgba(16, 185, 129, 0.25) !important;
 }
+
+/* --- Address Link --- */
+.address-link {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: opacity 0.2s ease;
+}
+
+.address-link:hover {
+  opacity: 0.85;
+}
+
+/* --- Small Embedded Map --- */
+.contact-map-wrapper {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: -4px 0 4px 0;
+}
+
+.contact-map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border-radius: 14px;
+}
+
+/* --- Hours of Operation Styling --- */
+.contact-hours-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-hours-note {
+  display: block;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  margin-top: 2px;
+}
 /* --- Responsive Media Queries --- */
 @media (max-width: 868px) {
   .contact-container {

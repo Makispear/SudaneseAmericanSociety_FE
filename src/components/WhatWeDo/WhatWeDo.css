@@ -104,7 +104,11 @@
   border: 1px solid rgba(26, 127, 61, 0.18);
   border-left: 4px solid #c9a448;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(26, 127, 61, 0.06), rgba(201, 164, 72, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(26, 127, 61, 0.06),
+    rgba(201, 164, 72, 0.08)
+  );
   box-shadow: 0 10px 24px rgba(26, 127, 61, 0.08);
 }
 
@@ -159,19 +163,27 @@
   }
 
   @keyframes bounceHoriz {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(4px); }
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(4px);
+    }
   }
 
-  /* Horizontal swipeable row with card peek */
+  /* Horizontal swipeable row with card peek and visual clipping */
   .what-we-do__grid {
     display: flex;
     overflow-x: auto;
     gap: 14px;
-    padding-bottom: 12px;
+    padding: 4px 4px 16px 4px; /* Slight padding to avoid cutting off card hover/shadows */
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    /* Visual cue: fades out slightly on the right edge */
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
   }
 
   .what-we-do__grid::-webkit-scrollbar {
@@ -179,11 +191,13 @@
   }
 
   .what-we-do__card {
-    flex: 0 0 78%; /* Leaves the next card peeking out */
+    flex: 0 0 74%; /* Shows about 74% of the current card, leaving the next one clearly peeking */
     max-width: 270px;
     scroll-snap-align: start;
-    padding: 20px 18px;
+    padding: 22px 18px;
     border-radius: 16px;
+    /* Enhanced shadow on mobile to make cards look floating and swipeable */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   }
 
   .what-we-do__icon {

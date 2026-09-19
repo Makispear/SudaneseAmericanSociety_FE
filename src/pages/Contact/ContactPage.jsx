@@ -9,7 +9,7 @@ function ContactPage() {
     try {
       await navigator.clipboard.writeText("Info@ctsudanese.org");
       setCopied(true);
-      setTimeout(() => setCopied(false), 2500); // Reset hint after 2.5 seconds
+      setTimeout(() => setCopied(false), 2500);
     } catch (err) {
       console.error("Failed to copy email:", err);
     }
@@ -42,10 +42,43 @@ function ContactPage() {
                 <span className="contact-icon">📍</span>
                 <div>
                   <strong>Address</strong>
-                  <p>
-                    727 Campbell Ave
-                    <br />
+                  <a
+                    href="https://maps.google.com/?q=727+Campbell+Ave,+West+Haven,+CT+06516"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="address-link"
+                    title="Open location in Google Maps"
+                  >
+                    727 Campbell Ave<br />
                     West Haven, CT 06516
+                  </a>
+                </div>
+              </div>
+
+              {/* Small Embedded Google Map */}
+              <div className="contact-map-wrapper">
+                <iframe
+                  title="Sudanese American Society Location Map"
+                  src="https://maps.google.com/maps?q=727+Campbell+Ave,+West+Haven,+CT+06516&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="160"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              <div className="contact-item">
+                <span className="contact-icon">🕒</span>
+                <div>
+                  <strong>Hours of Operation</strong>
+                  <p className="contact-hours-text">
+                    Monday – Sunday: 9:00 AM – 5:00 PM
+                    <br />
+                    <span className="contact-hours-note">
+                      *Note: Closed on Fridays during Friday Prayer time.
+                    </span>
                   </p>
                 </div>
               </div>
@@ -60,12 +93,8 @@ function ContactPage() {
                     onClick={handleCopyEmail}
                     title="Click to copy email address"
                   >
-                    <span className="email-address">
-                      Info@ctsudanese.org
-                    </span>
-                    <span
-                      className={`copy-badge ${copied ? "copy-badge--success" : ""}`}
-                    >
+                    <span className="email-address">Info@ctsudanese.org</span>
+                    <span className={`copy-badge ${copied ? "copy-badge--success" : ""}`}>
                       {copied ? "✓ Copied to clipboard" : "Click to copy"}
                     </span>
                   </button>
