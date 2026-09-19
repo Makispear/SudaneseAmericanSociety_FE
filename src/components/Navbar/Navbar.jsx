@@ -34,7 +34,12 @@ const Navbar = () => {
     >
       <div className="navbar__container">
         {/* Logo */}
-        <Link to="/" className="logoLink" aria-label="Go to homepage" onClick={closeMenu}>
+        <Link
+          to="/"
+          className="logoLink"
+          aria-label="Go to homepage"
+          onClick={closeMenu}
+        >
           <div className="logoWrap">
             <img src={sudaneseFlag} alt="Sudanese flag" className="logoIcon" />
             <span className="logoText">Sudanese American Society</span>
@@ -43,12 +48,24 @@ const Navbar = () => {
 
         {/* Desktop Navigation Links */}
         <div className="navbar__links">
-          <Link to="/" className="navbar__link">Home</Link>
-          <Link to="/about" className="navbar__link">About</Link>
-          <Link to="/school" className="navbar__link">School</Link>
-          {/* <Link to="/contact" className="navbar__link">Contact</Link> */}
-          <Link to="/signup" className="navbar__link navbar__link--join">signup</Link>
-          <Link to="/login" className="navbar__link navbar__link--login">Login</Link>
+          <Link to="/" className="navbar__link">
+            Home
+          </Link>
+          <Link to="/about" className="navbar__link">
+            About
+          </Link>
+          <Link to="/school" className="navbar__link">
+            School
+          </Link>
+          <Link to="/contact" className="navbar__link">
+            Contact
+          </Link>
+          <Link to="/signup" className="navbar__link navbar__link--join">
+            signup
+          </Link>
+          <Link to="/login" className="navbar__link navbar__link--login">
+            Login
+          </Link>
         </div>
 
         {/* Mobile Burger Toggle Button */}
@@ -64,26 +81,48 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Drawer */}
-      <div className={`navbar__mobile-menu ${isMobileMenuOpen ? "is-open" : ""}`}>
+      <div
+        className={`navbar__mobile-menu ${isMobileMenuOpen ? "is-open" : ""}`}
+      >
         <div className="navbar__mobile-links">
-          <Link to="/" className="navbar__mobile-link navbar__highlight" onClick={closeMenu}>
+          <Link
+            to="/"
+            className="navbar__mobile-link navbar__highlight"
+            onClick={closeMenu}
+          >
             Home
           </Link>
-          <Link to="/login" className="navbar__mobile-link navbar__highlight" onClick={closeMenu}>
+          <Link
+            to="/login"
+            className="navbar__mobile-link navbar__highlight"
+            onClick={closeMenu}
+          >
             Login
           </Link>
-          <Link to="/signup" className="navbar__mobile-link navbar__highlight" onClick={closeMenu}>
+          <Link
+            to="/signup"
+            className="navbar__mobile-link navbar__highlight"
+            onClick={closeMenu}
+          >
             Sign Up
           </Link>
           <Link to="/about" className="navbar__mobile-link" onClick={closeMenu}>
             About
           </Link>
-          <Link to="/school" className="navbar__mobile-link" onClick={closeMenu}>
+          <Link
+            to="/school"
+            className="navbar__mobile-link"
+            onClick={closeMenu}
+          >
             School
           </Link>
-          {/* <Link to="/contact" className="navbar__mobile-link" onClick={closeMenu}>
+          <Link
+            to="/contact"
+            className="navbar__mobile-link"
+            onClick={closeMenu}
+          >
             Contact
-          </Link> */}
+          </Link>
         </div>
       </div>
     </nav>

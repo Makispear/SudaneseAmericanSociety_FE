@@ -6,6 +6,7 @@ import SignupPage from "../pages/Auth/SignUp/SignupPage.jsx";
 import LoginPage from "../pages/Auth/Login/LoginPage.jsx";
 import EmailVerificationPage from "../pages/Email/Verification/EmailVerificationPage.jsx";
 import ForgotPasswordPage from "../pages/Auth/ForgotPassword/ForgotPasswordPage.jsx";
+import ContactPage from "../pages/Contact/ContactPage.jsx";
 // import FamilyMembershipPage from "../pages/FamilyMembershipPage";
 // import EventsPage from "../pages/EventsPage";
 // import MembersDirectoryPage from "../pages/MembersDirectoryPage";
@@ -27,6 +28,7 @@ function AppRoutes() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/verify-email" element={<EmailVerificationPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/contact" element={<ContactPage />} />
       {/* <Route path="/family-membership" element={<FamilyMembershipPage />} /> */}
       {/* <Route path="/events" element={<EventsPage />} /> */}
       {/* <Route path="/directory" element={<MembersDirectoryPage />} /> */}

@@ -21,6 +21,7 @@ const Footer = () => {
             <Link to="/school">School</Link>
             <Link to="/#membership">Membership</Link>
             <Link to="/signup">Become a Member</Link>
+            <Link to="/contact">Contact</Link>
           </nav>
         </div>
 
